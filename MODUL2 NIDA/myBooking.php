@@ -23,7 +23,6 @@ if(!empty($_GET['servis'])){
   $totalservis = count($servis) *20;
   $total = $total+ $totalservis;
 }
-
 ?>
 
 <!doctype html>

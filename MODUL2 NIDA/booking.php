@@ -33,7 +33,7 @@
         <form action="myBooking.php" method="GET">
           <div class="form-group">
             <label for="exampleInputnama">Name</label>
-            <input type="text" class="form-control" id="exampleInputnama" name="name">
+            <input type="text" class="form-control" id="exampleInputnama" name="nama">
           </div>
 
           <div class="form-group">
@@ -43,7 +43,7 @@
 
           <div class="form-group">
             <label for="inputdurasi">Duration</label>
-            <input type="number" id="inputdurasi" class="form-control" aria-describedby="durasihelp" name="inputdurasi">
+            <input type="number" id="inputdurasi" class="form-control" aria-describedby="durasihelp" name="durasi">
             <small id="durasihelp" class="form-text text-muted">
               Day(s)
             </small>

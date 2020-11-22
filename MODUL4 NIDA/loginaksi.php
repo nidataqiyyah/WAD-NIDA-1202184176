@@ -29,5 +29,4 @@ if($cek > 0){
 }else{
 	header( "refresh:0;url=login.php?notif=failed" );
 }
- 
 ?>

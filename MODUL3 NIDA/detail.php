@@ -2,7 +2,7 @@
 include('config.php');
 $id = $_GET['id'];
 $query = "SELECT * FROM event_tabel WHERE id = $id";
-$select = mysqli_connect($conn, $query);
+$select = mysqli_query($conn, $query);
 ?>
 <!doctype html>
 <html lang="en">
@@ -43,7 +43,7 @@ $select = mysqli_connect($conn, $query);
                 <?php
                 $id = $_GET['id'];
                 $data = mysqli_query($conn, "select * from event_tabel where id=$id");
-                while ($data) {
+                while ($tampil=mysqli_fetch_assoc($data)) {
                 ?>
                     <img src="gambar/<?php echo $tampil['gambar']; ?>" class="card-img-top" alt="...">
                     <div class="card-body">

@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
-
+<?php
+session_start()
+?>
 
 <head>
     <!-- Required meta tags -->
@@ -33,8 +35,7 @@
         </div>
     </nav>
 
-    <?php if (($_GET['notif']) and $_GET['notif'] == "success") {
-        header("refresh:2;url=index.php");
+    <?php if (isset($_GET['notif']) and $_GET['notif'] == "success") {
     ?>
         <div class="bg-white pb-1">
             <div class="alert alert-warning">
@@ -71,16 +72,17 @@
                     <form action="loginaksi.php" method="POST">
                         <div class="form-group">
                             <label for="exampleInputEmail1">E-mail</label>
-                            <input type="email" class="form-control" id="email" name="email" value="<?php if (isset($_REQUEST['email'])) {
-                                                                                                        echo $_REQUEST['email'];
+                            <input type="email" class="form-control" id="email" name="email" value="<?php if (isset($_COOKIE['email'])) {
+                                                                                                        echo $_COOKIE['email'];
                                                                                                     } ?>">
                         </div>
                         <div class="form-group">
                             <label for="password">Kata Sandi</label>
-                            <input type="password" class="form-control" id="password" name="password" value="<?php if (isset($_REQUEST['password'])) {
-                                                                                                                    echo $_REQUEST['password'];
+                            <input type="password" class="form-control" id="password" name="password" value="<?php if (isset($_COOKIE['password'])) {
+                                                                                                                    echo $_COOKIE['password'];
                                                                                                                 } ?>">
                         </div>
+                        
                         <div class="form-group form-check">
                             <input type="checkbox" class="form-check-input" id="remember" name="remember">
                             <label class="form-check-label" for="remember">Remember me</label>

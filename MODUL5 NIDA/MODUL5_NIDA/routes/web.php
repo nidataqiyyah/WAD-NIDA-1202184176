@@ -22,7 +22,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::view('/product', 'product');
 Route::view('/order', 'order');
 Route::view('/addproduct', 'addproduct');
 Route::view('/ordernow', 'ordernow');

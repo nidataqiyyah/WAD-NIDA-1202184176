@@ -5,7 +5,7 @@
             <a class="navbar-brand " href="/">HOME</a>
           </li>
           <li class="nav-item">
-            <a class="navbar-brand" href="/product">PRODUCT</a>
+            <a class="navbar-brand" href="/produk">PRODUCT</a>
           </li>
           <li class="nav-item">
             <a class="navbar-brand" href="/order">ORDER</a>
